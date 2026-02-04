@@ -5,10 +5,12 @@ export const Navbar = () => {
 
     return (
      <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="netflixhome">
-          Navbar
-        </a>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      
+    
+      <Link className="navbar-brand" to="/">
+        Navbar
+      </Link>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -16,7 +18,7 @@ export const Navbar = () => {
               <Link class="nav-link" to="/netflixhome">
            Home </Link>
             </li>
-            <li cl ss="nav-item active">
+            <li class="nav-item active">
               <Link class="nav-link" to="/netflixmovies">
                 Movies
               </Link>

@@ -17,6 +17,9 @@ import { NetflixHome } from './component/NetflixHome'
 import { Navbar } from './component/Navbar'
 import { NetflixMovies } from './component/NetflixMovies'
 import { NetflixShows } from './component/NetflixShows'
+import { HomeComponent } from './component/HomeComponent'
+import { Watch } from './component/Watch'
+import { ErrorNotFound } from './component/ErrorNotFound'
 
 
 
@@ -24,12 +27,14 @@ function App() {
   const [count, setCount] = useState(0)
   return (
     <div>
-    <Navbar></Navbar>
+        <Navbar></Navbar>
         <Routes>
           <Route path="/netflixhome" element={<NetflixHome/>}></Route>
           <Route path="/netflixmovies" element={<NetflixMovies/>}></Route>
          <Route path="/netflixshows" element={<NetflixShows/>}></Route>
-         <Route path="/netflixhome" element={<Navbar/>}></Route>
+         <Route path='/' element={<HomeComponent/>}></Route>
+         <Route path='/watch/:name' element={<Watch/>}></Route>
+          <Route path='/*' element={<ErrorNotFound/>}></Route>
          
           {/* <Route path="/netflixhome" element={<NetflixHome/>}></Route> */}
         </Routes>
